@@ -14,6 +14,7 @@ public class IPrincipal extends javax.swing.JFrame {
 
     AbreFile miFile = new AbreFile();
     gesDom miGestorDom = new gesDom();
+    gesSax miGestorSax = new gesSax();
 
     /**
      * Creates new form IPrincipal
@@ -48,6 +49,7 @@ public class IPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         LeerDom = new javax.swing.JMenuItem();
+        LeerSax = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,6 +101,14 @@ public class IPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(LeerDom);
+
+        LeerSax.setText("Leer SAX");
+        LeerSax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LeerSaxActionPerformed(evt);
+            }
+        });
+        jMenu1.add(LeerSax);
 
         jMenuBar1.add(jMenu1);
 
@@ -177,7 +187,7 @@ public class IPrincipal extends javax.swing.JFrame {
 
         salida = miGestorDom.dameMiXml();
         ventanaLectura.setText(salida);
-       
+
     }//GEN-LAST:event_refrescarActionPerformed
 
     private void nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoActionPerformed
@@ -201,9 +211,19 @@ public class IPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_modificarTituloActionPerformed
 
     private void modificarAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarAutorActionPerformed
-       IModificarAutor ima=new IModificarAutor();
-       ima.setVisible(true);
+        IModificarAutor ima = new IModificarAutor();
+        ima.setVisible(true);
     }//GEN-LAST:event_modificarAutorActionPerformed
+
+    private void LeerSaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeerSaxActionPerformed
+        if (miFile.dameFile() == 1) {
+            muestrameInformacion.setText(miFile.getRutaAuxiliar());
+        } else {
+            muestrameInformacion.setText("la has cagado");
+        }
+        miGestorSax.abrirMiSAX(miFile.getFile());
+        ventanaLectura.setText(miGestorSax.recorrerSAX());
+    }//GEN-LAST:event_LeerSaxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,6 +262,7 @@ public class IPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem LeerDom;
+    private javax.swing.JMenuItem LeerSax;
     private javax.swing.JButton guardar;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;

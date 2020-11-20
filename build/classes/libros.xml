@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libros xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LibrosSchema.xsd">
+    <Libro publicado="1838">
+        <Titulo>Oliver Twist</Titulo>
+        <Autor>Charles Dickens</Autor>
+    </Libro>
+    <Libro publicado="2005">
+        <Titulo>marecito</Titulo>
+        <Autor>John Banville</Autor>
+    </Libro>
+    <Libro publicado="1946">
+        <Titulo>El principito</Titulo>
+        <Autor>Antoine de Saint-Exupery</Autor>
+    </Libro>
+    <Libro publicado="12345">
+        <Titulo>la Hostia de buen libro</Titulo>
+        <Autor>def</Autor>
+    </Libro>
+    <Libro publicado="2222">
+        <Titulo>holita</Titulo>
+        <Autor>que ase</Autor>
+    </Libro>
+    <Libro publicado="2033">
+        <Titulo>Libro de la historia</Titulo>
+        <Autor>autor desconocido</Autor>
+    </Libro>
+    <Libro publicado="1991">
+        <Titulo>bla bla </Titulo>
+        <Autor>bla bla bla bla</Autor>
+    </Libro>
+    <Libro publicado="1987">
+        <Titulo>2025-libro modificado por que si</Titulo>
+        <Autor>pues aquel señor que lo escribio</Autor>
+    </Libro>
+</Libros>
