@@ -15,6 +15,7 @@ public class IPrincipal extends javax.swing.JFrame {
     AbreFile miFile = new AbreFile();
     gesDom miGestorDom = new gesDom();
     gesSax miGestorSax = new gesSax();
+    gesJAXB miGestorJAXB = new gesJAXB();
 
     /**
      * Creates new form IPrincipal
@@ -48,6 +49,7 @@ public class IPrincipal extends javax.swing.JFrame {
         modificarAutor = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        LeerJAXB = new javax.swing.JMenuItem();
         LeerDom = new javax.swing.JMenuItem();
         LeerSax = new javax.swing.JMenuItem();
 
@@ -93,6 +95,14 @@ public class IPrincipal extends javax.swing.JFrame {
         });
 
         jMenu1.setText("File");
+
+        LeerJAXB.setText("Leer JAXB");
+        LeerJAXB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LeerJAXBActionPerformed(evt);
+            }
+        });
+        jMenu1.add(LeerJAXB);
 
         LeerDom.setText("Leer DOM");
         LeerDom.addActionListener(new java.awt.event.ActionListener() {
@@ -225,6 +235,18 @@ public class IPrincipal extends javax.swing.JFrame {
         ventanaLectura.setText(miGestorSax.recorrerSAX());
     }//GEN-LAST:event_LeerSaxActionPerformed
 
+    private void LeerJAXBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeerJAXBActionPerformed
+        String salida = "";
+        if (miFile.dameFile() == 1) {
+            muestrameInformacion.setText(miFile.getRutaAuxiliar());
+            miGestorJAXB.abrirXML_JAXB(miFile.getFile());
+            salida = miGestorJAXB.recorrerJAXB();
+        } else {
+            muestrameInformacion.setText("la has cagado");
+        }
+        ventanaLectura.setText(salida);
+    }//GEN-LAST:event_LeerJAXBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +284,7 @@ public class IPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem LeerDom;
+    private javax.swing.JMenuItem LeerJAXB;
     private javax.swing.JMenuItem LeerSax;
     private javax.swing.JButton guardar;
     private javax.swing.JMenu jMenu1;

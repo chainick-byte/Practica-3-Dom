@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/src/ManejadorSAX.java</file>
+            <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/nbproject/xml_binding_build.xml</file>
+            <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/src/IPrincipal.java</file>
+            <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/build/generated-sources/jaxb/JavaLibros/Libros.java</file>
+            <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/xml-resources/jaxb/javalibros_binding/Schemalibros.xsd</file>
             <file>file:/C:/Users/igorr/OneDrive/Documentos/NetBeansProjects/patrones/LibrosDomAndSax/src/gesSax.java</file>
         </group>
     </open-files>

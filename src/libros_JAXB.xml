@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libros xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LibrosSchema.xsd">
+    <Libro publicado="1838">
+        <Titulo>Oliver Twist</Titulo>
+        <Autor>Charles Dickens</Autor>
+        <Editorial>Una muy vieja</Editorial>
+    </Libro>
+    <Libro publicado="2005">
+        <Titulo>marecito</Titulo>
+        <Autor>John Banville</Autor>
+        <Editorial>desconocido</Editorial>
+    </Libro>
+    <Libro publicado="1946">
+        <Titulo>El principito</Titulo>
+        <Autor>Antoine de Saint-Exupery</Autor>
+        <Editorial>Otra editorial</Editorial>
+    </Libro>
+    <Libro publicado="12345">
+        <Titulo>la Hostia de buen libro</Titulo>
+        <Autor>def</Autor>
+        <Editorial>pues cualquier otra</Editorial>
+    </Libro>
+</Libros>
